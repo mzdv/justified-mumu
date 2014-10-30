@@ -2,11 +2,13 @@ var http = require('http');
 
 var server = http.createServer(function (request, response) {
 
-	// console.log(request.headers.host);
+	var host = request.headers.host.split(':');
 
-	response.write("Host: " + request.headers.host + '\n');
+	response.write("Host: " + host[0] + '\n');
+	response.write("Port: " + host[1] + '\n');
 	response.write("User-agent: " + request.headers['user-agent'] + '\n');	//dirty
 	response.write("HTTP method: " + request.method + '\n');
+	
 	response.end("Request: " + request.url + '\n');
 
 })
