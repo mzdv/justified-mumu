@@ -2,7 +2,10 @@ var http = require('http');
 
 var server = http.createServer(function (request, response) {
 
-	response.write(JSON.stringify(request.headers));
+	// console.log(request.headers.host);
+
+	response.write(request.headers.host);
+	response.write(request.headers['user-agent']);	//dirty
 	response.write(request.url);
 	response.end(request.method);
 
