@@ -1,0 +1,7 @@
+{
+	"name": "justified-mumu",
+	"description": "Simple HTTP request mirror.",
+	"author": "Milos Zivadinovic <mzdv@outlook.com>",
+	"version": "1.0",
+	"license": "MIT"
+}
