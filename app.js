@@ -17,6 +17,6 @@ var server = http.createServer(function (request, response) {
 	console.log("Error log: " + error + '\n')
 })
 
-.listen("1337", "127.0.0.1");
+.listen(1337, "127.0.0.1");
 
 
